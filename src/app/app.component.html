@@ -1,11 +1,13 @@
-<div class="container-fluid">
-    <ngb-carousel *ngIf="images">
-        <ng-template ngbSlide *ngFor="let image of images">
-            <img [src]="image" alt="Random first slide" class="img-fluid" style="width: 100%;">
-            <div class="carousel-caption">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
-        </ng-template>
-    </ngb-carousel>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="d-flex flex-row">
+        <a class="navbar-brand brand">
+            <img src="../assets/logo.png" class="d-inline-block align-top" alt="">
+        </a>
+    </div>
+    <button class="btn btn-outline-light my-2 my-sm-0" (click)="login()">登录</button>
+</nav>
+<div class="alert alert-danger" role="alert" *ngIf="errorMessage!==''">
+    {{ errorMessage }}
 </div>
+
+<router-outlet></router-outlet>

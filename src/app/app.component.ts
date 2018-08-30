@@ -1,14 +1,22 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Utils} from './services/utils';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.less']
 })
-export class AppComponent {
-    images = [`http://warehouse.pusudo.cn/introduction/WechatIMG618.jpeg`];
+export class AppComponent implements OnInit {
+    errorMessage = '';
 
-    constructor() {
+    ngOnInit() {
+    }
 
+    login() {
+        if (Utils.IsWxChat()) {
+            this.errorMessage = Utils.FetchUserAgent();
+        } else {
+            window.location.href = 'https://backbone.pusudo.cn';
+        }
     }
 }
