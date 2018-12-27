@@ -1,8 +1,8 @@
 <div class="d-flex flex-column justify-content-center align-items-center">
     <div *ngFor="let item of entry" class="item">
-        <img [src]="item.url" alt="Random first slide" class="img-fluid" style="width: 100%;">
+        <img [src]="item.src" class="img-fluid" style="width: 100%;">
         <div class="carousel-caption caption">
-            <button class="btn btn-outline-light">{{ item.name }}</button>
+            <button class="btn btn-outline-light" (click)="details(item.url)">{{ item.name }}</button>
             <p>{{ item.digest }}</p>
         </div>
     </div>
