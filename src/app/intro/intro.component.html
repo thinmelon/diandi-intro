@@ -1,6 +1,14 @@
 <div class="d-flex flex-column justify-content-center align-items-center">
     <div *ngFor="let item of entry" class="item">
-        <img [src]="item.src" class="img-fluid" style="width: 100%;" (click)="details(item.url)">
+        <!--<img [src]="item.src" class="img-fluid" style="width: 100%;" (click)="details(item.url)">-->
+        <picture>
+            <source srcset="{{ item.src_375 }}" media="(max-width: 600px)">
+            <source srcset="{{ item.src_768 }}" media="(max-width: 1024px)">
+            <img src="{{ item.src_1920 }}" alt="diandi" style="width: 100%">
+            <!--<source srcset="../../assets/shop-375.jpg" media="(max-width: 600px)">-->
+            <!--<source srcset="../../assets/shop-768.jpg" media="(max-width: 1024px)">-->
+            <!--<img src="../../assets/delicacy-map-1280.jpg" alt="pic" style="width: 100%">-->
+        </picture>
         <div class="carousel-caption caption" style="top: 100px">
             <button class="btn btn-outline-light" (click)="details(item.url)">{{ item.name }}</button>
             <p>{{ item.digest }}</p>

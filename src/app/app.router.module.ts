@@ -1,8 +1,14 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {IntroComponent} from './intro/intro.component';
+import {DetailComponent} from './detail/detail.component';
 
-const __ROUTES__: Routes = [{path: '**', component: IntroComponent}];
+const __ROUTES__: Routes = [
+    {
+        path: 'detail',
+        component: DetailComponent
+    },
+    {path: '**', component: IntroComponent}];
 
 @NgModule({
     // The forRoot() method is called because a configured router is provided at the app's root.
