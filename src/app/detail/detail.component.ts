@@ -14,6 +14,6 @@ export class DetailComponent implements OnInit {
     }
 
     buyTemplate() {
-        window.location.href = 'https://backbone.pusudo.cn/entry/wechat/miniprogram/scenario/intro;template=%7B"templateId":14,"userDesc":"美食地图","userVersion":"0.0.1","price":"1.00","shouldHavaBusiness":0%7D;channel=miniprogram';
+        window.location.href = 'https://backbone.pusudo.cn/entry/wechat/miniprogram/scenario/intro;template=%7B"templateId":5,"userDesc":"美食地图","userVersion":"0.0.1","price":"1.00","shouldHavaBusiness":0%7D;channel=miniprogram';
     }
 }
